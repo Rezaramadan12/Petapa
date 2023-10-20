@@ -10,15 +10,22 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Untan :</div>
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $untan->volumetotaledge }}%</div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    {{ $untan->volumetotaledge }}%</div>
                                 <div class="progress-container">
                                     <div class="progress">
-                                        @if($untan->volumetotaledge <= 33)
-                                            <div class="progress-bar" style="width: {{ $untan->volumetotaledge }}%; background-color: #2ecc71;"></div>
+                                        @if ($untan->volumetotaledge <= 33)
+                                            <div class="progress-bar"
+                                                style="width: {{ $untan->volumetotaledge }}%; background-color: #2ecc71;">
+                                            </div>
                                         @elseif($untan->volumetotaledge <= 66)
-                                            <div class="progress-bar" style="width: {{ $untan->volumetotaledge }}%; background-color: #f1c40f;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $untan->volumetotaledge }}%; background-color: #f1c40f;">
+                                            </div>
                                         @else
-                                            <div class="progress-bar" style="width: {{ $untan->volumetotaledge }}%; background-color: #e74c3c;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $untan->volumetotaledge }}%; background-color: #e74c3c;">
+                                            </div>
                                         @endif
                                     </div>
                                 </div>
@@ -37,16 +44,24 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Polnep :</div>
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $polnep->volumetotaledge }}%</div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Polnep :
+                                </div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    {{ $polnep->volumetotaledge }}%</div>
                                 <div class="progress-container">
                                     <div class="progress">
-                                        @if($polnep->volumetotaledge <= 33)
-                                            <div class="progress-bar" style="width: {{ $polnep->volumetotaledge }}%; background-color: #2ecc71;"></div>
+                                        @if ($polnep->volumetotaledge <= 33)
+                                            <div class="progress-bar"
+                                                style="width: {{ $polnep->volumetotaledge }}%; background-color: #2ecc71;">
+                                            </div>
                                         @elseif($polnep->volumetotaledge <= 66)
-                                            <div class="progress-bar" style="width: {{ $polnep->volumetotaledge }}%; background-color: #f1c40f;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $polnep->volumetotaledge }}%; background-color: #f1c40f;">
+                                            </div>
                                         @else
-                                            <div class="progress-bar" style="width: {{ $polnep->volumetotaledge }}%; background-color: #e74c3c;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $polnep->volumetotaledge }}%; background-color: #e74c3c;">
+                                            </div>
                                         @endif
                                     </div>
                                 </div>
@@ -65,16 +80,21 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Siskom :</div>
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $total_siskom }}%</div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Siskom :
+                                </div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $total_siskom }}%
+                                </div>
                                 <div class="progress-container">
                                     <div class="progress">
-                                        @if($total_siskom <= 33)
-                                            <div class="progress-bar" style="width: {{ $total_siskom }}%; background-color: #2ecc71;"></div>
+                                        @if ($total_siskom <= 33)
+                                            <div class="progress-bar"
+                                                style="width: {{ $total_siskom }}%; background-color: #2ecc71;"></div>
                                         @elseif($total_siskom <= 66)
-                                            <div class="progress-bar" style="width: {{ $total_siskom }}%; background-color: #f1c40f;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $total_siskom }}%; background-color: #f1c40f;"></div>
                                         @else
-                                            <div class="progress-bar" style="width: {{ $total_siskom }}%; background-color: #e74c3c;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $total_siskom }}%; background-color: #e74c3c;"></div>
                                         @endif
                                     </div>
                                 </div>
@@ -94,16 +114,24 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Rusunawa :</div>
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $rusunawa->volumetotaledge }}%</div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Rusunawa :
+                                </div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    {{ $rusunawa->volumetotaledge }}%</div>
                                 <div class="progress-container">
                                     <div class="progress">
-                                        @if($rusunawa->volumetotaledge <= 33)
-                                            <div class="progress-bar" style="width: {{ $rusunawa->volumetotaledge }}%; background-color: #2ecc71;"></div>
+                                        @if ($rusunawa->volumetotaledge <= 33)
+                                            <div class="progress-bar"
+                                                style="width: {{ $rusunawa->volumetotaledge }}%; background-color: #2ecc71;">
+                                            </div>
                                         @elseif($rusunawa->volumetotaledge <= 66)
-                                            <div class="progress-bar" style="width: {{ $rusunawa->volumetotaledge }}%; background-color: #f1c40f;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $rusunawa->volumetotaledge }}%; background-color: #f1c40f;">
+                                            </div>
                                         @else
-                                            <div class="progress-bar" style="width: {{ $rusunawa->volumetotaledge }}%; background-color: #e74c3c;"></div>
+                                            <div class="progress-bar"
+                                                style="width: {{ $rusunawa->volumetotaledge }}%; background-color: #e74c3c;">
+                                            </div>
                                         @endif
                                     </div>
                                 </div>
@@ -140,7 +168,7 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
-                        <h1>haloow</h1>
+                        <h1>haloow ufyiffyiyfyifiyf</h1>
                     </div>
                 </div>
             </div>
