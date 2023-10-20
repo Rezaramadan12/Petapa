@@ -17,13 +17,13 @@ class MapsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $title = 'Maps';
-        // $maps = Maps::all();
+    // public function index()
+    // {
+    //     $title = 'Maps';
+    //     // $maps = Maps::all();
 
-        return view('maps.maps', compact('title'));
-    }
+    //     return view('maps.maps', compact('title'));
+    // }
     public function cobaindex()
     {
         $data['title'] = 'Maps';
@@ -116,7 +116,7 @@ class MapsController extends Controller
 
         // $maps = Maps::all();
 
-        return view('maps.cobamaps', $data);
+        return view('maps.maps', $data);
 
         // Gabungkan nilai-nilai volume dalam satu array
         // $volumes = [

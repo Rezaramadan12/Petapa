@@ -26,8 +26,8 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-Route::get('maps', [MapsController::class, 'index'])->name('maps.index');
-Route::get('cobamaps', [MapsController::class, 'cobaindex'])->name('maps.cobaindex');
+Route::get('maps', [MapsController::class, 'cobaindex'])->name('maps.cobaindex');
+// Route::get('cobamaps', [MapsController::class, 'cobaindex'])->name('maps.cobaindex');
 Route::get('data',[MapsController::class,'data'])->name('maps.data');
 Route::get('rutepengangkutan', [RuteController::class, 'index'])->name('rutepengangkutan.index');
 
