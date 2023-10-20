@@ -21,10 +21,11 @@ use App\Http\Controllers\API\SiskomController;
 |
 */
 
-Route::get('/', function () {
-    return 'test';
-});
+// Route::get('/', function () {
+//     return 'test';
+// });
 
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::get('maps', [MapsController::class, 'cobaindex'])->name('maps.cobaindex');
 // Route::get('cobamaps', [MapsController::class, 'cobaindex'])->name('maps.cobaindex');
