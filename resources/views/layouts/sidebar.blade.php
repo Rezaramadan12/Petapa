@@ -47,7 +47,7 @@
                 </a>
             </li> --}}
             <li class="nav-item">
-                <a class="nav-link" href="/cobamaps">
+                <a class="nav-link" href="/maps">
                     <i class="fas fa-fw fa-map"></i>
                     <span>Peta Tempat Sampah</span>
                 </a>
