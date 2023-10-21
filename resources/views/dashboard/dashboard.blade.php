@@ -168,7 +168,7 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
-                        <h1>Website ini dibuat untuk memenuhi salah satu persyaratan memperoleh gelar S.kom</h1>
+                        <p>Website ini dibuat untuk memenuhi salah satu persyaratan memperoleh gelar S.kom</p>
                     </div>
                 </div>
             </div>
