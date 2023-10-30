@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePolnepsTable extends Migration
+class CreateMasterSensorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreatePolnepsTable extends Migration
      */
     public function up()
     {
-        Schema::create('polneps', function (Blueprint $table) {
+        Schema::create('master_sensors', function (Blueprint $table) {
             $table->id();
-            $table->integer('volumeorganik');
-            $table->integer('volumenonorganik');
-            $table->integer('volumeB3');
-            $table->float('volumetotaledge');
+            $table->integer('id_sensor');
+            $table->integer('kapasitas');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreatePolnepsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('polneps');
+        Schema::dropIfExists('master_sensors');
     }
 }

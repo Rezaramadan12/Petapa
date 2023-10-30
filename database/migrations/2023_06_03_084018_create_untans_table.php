@@ -18,7 +18,7 @@ class CreateUntansTable extends Migration
             $table->integer('volumeorganik');
             $table->integer('volumenonorganik');
             $table->integer('volumeB3');
-            $table->integer('volumetotaledge');
+            $table->float('volumetotaledge');
             $table->timestamps();
         });
     }

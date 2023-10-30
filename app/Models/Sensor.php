@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sensor extends Model
 {
     use HasFactory;
-    protected $table = 'master_sensor';
+    protected $table = 'master_sensors';
     protected $guarded =[
 
     ];
