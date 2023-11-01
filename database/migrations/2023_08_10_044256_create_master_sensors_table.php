@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateMasterSensorTable extends Migration
-{
+{   
     /**
      * Run the migrations.
      *
