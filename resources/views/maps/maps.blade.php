@@ -12,6 +12,8 @@
                         <i class="fas fa-fw fa-home"></i>
                         <span>Dashboard</span></a>
 
+                    <h6 class="m-0 font-weight-bold text-primary">Angka Pada Marker Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
+
                     <h6 class="m-0 font-weight-bold text-primary">Peta Tempat Sampah</h6>
                 </div>
 
@@ -72,7 +74,7 @@
                             var locations = [{
                                     "lat": -0.060109,
                                     "lng": 109.345409,
-                                    "name": 'Universitas Tanjungpura',
+                                    "name": 'Lokasi 1',
                                     "volumeorganik": {{ $untan->volumeorganik }},
                                     "volumenonorganik": {{ $untan->volumenonorganik }},
                                     "volumeB3": {{ $untan->volumeB3 }},
@@ -83,7 +85,7 @@
                                 {
                                     "lat": -0.062003,
                                     "lng": 109.348687,
-                                    "name": 'Rusunawa UNTAN',
+                                    "name": 'Lokasi 3',
                                     "volumeorganik": {{ $rusunawa->volumeorganik }},
                                     "volumenonorganik": {{ $rusunawa->volumenonorganik }},
                                     "volumeB3": {{ $rusunawa->volumeB3 }},
@@ -93,7 +95,7 @@
                                 {
                                     "lat": -0.053803,
                                     "lng": 109.347326,
-                                    "name": 'Politeknik Negeri Pontianak',
+                                    "name": 'Lokasi 2',
                                     "volumeorganik": {{ $polnep->volumeorganik }},
                                     "volumenonorganik": {{ $polnep->volumenonorganik }},
                                     "volumeB3": {{ $polnep->volumeB3 }},
@@ -157,14 +159,6 @@
                                     popupAnchor: [-3, -76]
                                 });
 
-                                // var warnaIcon = L.icon({
-                                //     iconUrl: '{{ asset('assets/img/tpsmerah1.png') }}',
-
-                                //     iconSize: [50, 90], // size of the icon
-                                //     shadowSize: [50, 64], // size of the shadow
-                                //     iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-                                //     popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
-                                // });
                                 var marker = L.marker([locations[i].lat, locations[i].lng],{icon: warnaIcon}).addTo(map);
 
 
@@ -213,7 +207,7 @@
                             var siskom = [{
                                 "lat": -0.0571164,
                                 "lng": 109.3452931,
-                                "name": 'Rekayasa Sistem Komputer',
+                                "name": 'Lokasi 4',
                                 "volumeorganik": {{ $siskom_tps1->kapasitas }},
                                 "volumenonorganik": {{ $siskom_tps2->kapasitas }},
                                 "volumetotaledge": {{ $total_siskom }},
@@ -303,14 +297,7 @@
                                     iconAnchor: [22, 94],
                                     popupAnchor: [-3, -76]
                                 });
-                            // var warnaIcon2 = L.icon({
-                            //         iconUrl: '{{ asset('assets/img/tpshijau1.png') }}',
 
-                            //         iconSize: [50, 90], // size of the icon
-                            //         shadowSize: [50, 64], // size of the shadow
-                            //         iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-                            //         popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
-                            //     });
                             L.marker([siskom[0].lat, siskom[0].lng],{icon: warnaIcon2}).addTo(map)
                                 .bindPopup(popupSiskom)
                             // .openPopup();

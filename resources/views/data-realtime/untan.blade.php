@@ -8,7 +8,7 @@
                 <a class="nav-link" href="/dashboard">
                         <i class="fas fa-fw fa-home"></i>
                         <span>Dashboard</span></a>
-                <h6 class="m-0 font-weight-bold text-primary">Data Real-Time Universitas Tanjungpura</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Data Real-Time Lokasi 1</h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">

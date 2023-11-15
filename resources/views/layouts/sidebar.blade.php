@@ -31,11 +31,10 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-warning py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ url('/untan') }}">UNTAN</a>
-                        <a class="collapse-item" href="{{ url('/polnep') }}">POLNEP</a>
-                        {{-- <a class="collapse-item" href="{{ url('/ump') }}">UMP</a> --}}
-                        <a class="collapse-item" href="{{ url('/rusunawa') }}">RUSUNAWA</a>
-                        <a class="collapse-item" href="{{ url('/siskom') }}">SISKOM</a>
+                        <a class="collapse-item" href="{{ url('/untan') }}">Lokasi 1</a>
+                        <a class="collapse-item" href="{{ url('/polnep') }}">Lokasi 2</a>
+                        <a class="collapse-item" href="{{ url('/rusunawa') }}">Lokasi 3</a>
+                        <a class="collapse-item" href="{{ url('/siskom') }}">Lokasi 4</a>
                     </div>
                 </div>
             </li>
