@@ -74,40 +74,6 @@
                 </div>
             </div>
 
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Lokasi 4 :
-                                </div>
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $total_siskom }}%
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress">
-                                        @if ($total_siskom <= 33)
-                                            <div class="progress-bar"
-                                                style="width: {{ $total_siskom }}%; background-color: #2ecc71;"></div>
-                                        @elseif($total_siskom <= 66)
-                                            <div class="progress-bar"
-                                                style="width: {{ $total_siskom }}%; background-color: #f1c40f;"></div>
-                                        @else
-                                            <div class="progress-bar"
-                                                style="width: {{ $total_siskom }}%; background-color: #e74c3c;"></div>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-trash fa-2x text-gray-300"></i>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Pending Requests Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-warning shadow h-100 py-2">
@@ -143,7 +109,43 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Lokasi 4 :
+                                </div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $total_siskom }}%
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress">
+                                        @if ($total_siskom <= 33)
+                                            <div class="progress-bar"
+                                                style="width: {{ $total_siskom }}%; background-color: #2ecc71;"></div>
+                                        @elseif($total_siskom <= 66)
+                                            <div class="progress-bar"
+                                                style="width: {{ $total_siskom }}%; background-color: #f1c40f;"></div>
+                                        @else
+                                            <div class="progress-bar"
+                                                style="width: {{ $total_siskom }}%; background-color: #e74c3c;"></div>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-trash fa-2x text-gray-300"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <div class="row">
             <div class="col-xl-12 col-lg-4">
