@@ -71,6 +71,22 @@ class MapsController extends Controller
             if ($a['volume'] > 66 && $b['volume'] > 66) {
                 // Kedua nilai volume di atas 66, urutkan berdasarkan jarak terdekat
                 return $a['jarak'] - $b['jarak'];
+            } elseif (
+                $a['volume'] >= 34 &&
+                $a['volume'] <= 65 &&
+                $b['volume'] >= 34 &&
+                $b['volume'] <= 65
+            ) {
+                // Kedua nilai volume antara 34 dan 65, urutkan berdasarkan jarak terdekat
+                return $a['jarak'] - $b['jarak'];
+            } elseif (
+                $a['volume'] >= 0 &&
+                $a['volume'] <= 33 &&
+                $b['volume'] >= 0 &&
+                $b['volume'] <= 33
+            ) {
+                // Kedua nilai volume antara 0 dan 33, urutkan berdasarkan jarak terdekat
+                return $a['jarak'] - $b['jarak'];
             } elseif ($a['volume'] > 66) {
                 // Hanya $a yang di atas 66, letakkan $a di atas $b
                 return -1;
@@ -78,10 +94,26 @@ class MapsController extends Controller
                 // Hanya $b yang di atas 66, letakkan $b di atas $a
                 return 1;
             } else {
-                // Kedua nilai volume di bawah 66, urutkan berdasarkan volume secara descending
+                // Kedua nilai volume di bawah 34, urutkan berdasarkan volume secara descending
                 return $b['volume'] - $a['volume'];
             }
         });
+
+        // usort($volumes, function ($a, $b) {
+        //     if ($a['volume'] > 66 && $b['volume'] > 66) {
+        //         // Kedua nilai volume di atas 66, urutkan berdasarkan jarak terdekat
+        //         return $a['jarak'] - $b['jarak'];
+        //     } elseif ($a['volume'] > 66) {
+        //         // Hanya $a yang di atas 66, letakkan $a di atas $b
+        //         return -1;
+        //     } elseif ($b['volume'] > 66) {
+        //         // Hanya $b yang di atas 66, letakkan $b di atas $a
+        //         return 1;
+        //     } else {
+        //         // Kedua nilai volume di bawah 66, urutkan berdasarkan volume secara descending
+        //         return $b['volume'] - $a['volume'];
+        //     }
+        // });
 
         // Lakukan perengkingan dengan memberikan nomor peringkat
         $rankedData = [];
@@ -157,8 +189,6 @@ class MapsController extends Controller
         // $data['rankRusunawa'] = $groupData['rusunawa'];
         // $data['rankPolnep'] = $groupData['polnep'];
         // $maps = Maps::all();
-
-
     }
     // public function data()
     // {
