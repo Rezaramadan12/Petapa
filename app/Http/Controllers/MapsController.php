@@ -47,22 +47,22 @@ class MapsController extends Controller
             'polnep' => [
                 'model' => 'polnep',
                 'volume' => $data['polnep']->volumetotaledge,
-                'jarak' => 10,
+                'jarak' => 4,
             ],
             'untan' => [
                 'model' => 'untan',
                 'volume' => $data['untan']->volumetotaledge,
-                'jarak' => 30,
+                'jarak' => 3,
             ],
             'siskom' => [
                 'model' => 'siskom',
                 'volume' => $data['total_siskom'],
-                'jarak' => 20,
+                'jarak' => 2,
             ],
             'rusunawa' => [
                 'model' => 'rusunawa',
                 'volume' => $data['rusunawa']->volumetotaledge,
-                'jarak' => 40,
+                'jarak' => 1,
             ],
         ];
 
