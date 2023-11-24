@@ -8,13 +8,13 @@
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
 
-                    <a class="nav-link" href="/dashboard">
+                    <a class="font-weight-bold  nav-link" href="/dashboard" style="color: black;">
                         <i class="fas fa-fw fa-home"></i>
                         <span>Dashboard</span></a>
 
-                    <h6 class="m-0 font-weight-bold text-primary">Angka Pada Marker Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
+                    <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada Marker Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
 
-                    <h6 class="m-0 font-weight-bold text-primary">Peta Tempat Sampah</h6>
+                    <h6 class="m-0 font-weight-bold " style="color: black;" >Peta Tempat Sampah</h6>
                 </div>
 
                 <!-- Card Body -->
