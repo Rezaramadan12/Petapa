@@ -118,33 +118,33 @@
 
                                  // Menentukan jenis ikon marker berdasarkan ranking dan persentase volumetotaledge
                                 if (ranking === 1) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau1.png') }}'; // Ikon hijau untuk ranking 1 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning1.png') }}'; // Ikon kuning untuk ranking 1 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah1.png') }}'; // Ikon merah untuk ranking 1 dan volume tinggi
                                     }
                                 } else if (ranking === 2) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau2.png') }}'; // Ikon hijau untuk ranking 2 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning2.png') }}'; // Ikon kuning untuk ranking 2 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah2.png') }}'; // Ikon merah untuk ranking 2 dan volume tinggi
                                     }
                                 } else if (ranking === 3) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau3.png') }}'; // Ikon hijau untuk ranking 3 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning3.png') }}'; // Ikon kuning untuk ranking 3 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah3.png') }}'; // Ikon merah untuk ranking 3 dan volume tinggi
                                     }
                                 } else if (ranking === 4) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau4.png') }}'; // Ikon hijau untuk ranking 4 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning4.png') }}'; // Ikon kuning untuk ranking 4 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah4.png') }}'; // Ikon merah untuk ranking 4 dan volume tinggi
@@ -257,33 +257,33 @@
 
                                  // Menentukan jenis ikon marker berdasarkan ranking dan persentase volumetotaledge
                                 if (ranking === 1) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau1.png') }}'; // Ikon hijau untuk ranking 1 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning1.png') }}'; // Ikon kuning untuk ranking 1 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah1.png') }}'; // Ikon merah untuk ranking 1 dan volume tinggi
                                     }
                                 } else if (ranking === 2) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau2.png') }}'; // Ikon hijau untuk ranking 2 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning2.png') }}'; // Ikon kuning untuk ranking 2 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah2.png') }}'; // Ikon merah untuk ranking 2 dan volume tinggi
                                     }
                                 } else if (ranking === 3) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau3.png') }}'; // Ikon hijau untuk ranking 3 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning3.png') }}'; // Ikon kuning untuk ranking 3 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah3.png') }}'; // Ikon merah untuk ranking 3 dan volume tinggi
                                     }
                                 } else if (ranking === 4) {
-                                    if (volumetotaledgePercentage <= 33.33) {
+                                    if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau4.png') }}'; // Ikon hijau untuk ranking 4 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66.67) {
+                                    } else if (volumetotaledgePercentage <= 66) {
                                         iconUrl = '{{ asset('assets/img/tpskuning4.png') }}'; // Ikon kuning untuk ranking 4 dan volume sedang
                                     } else {
                                         iconUrl = '{{ asset('assets/img/tpsmerah4.png') }}'; // Ikon merah untuk ranking 4 dan volume tinggi
