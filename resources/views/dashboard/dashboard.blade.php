@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Lokasi 1 :</div>
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Rata - Rata Tempat Sampah Lokasi I :</div>
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                     {{ $untan->volumetotaledge }}%</div>
                                 <div class="progress-container">
@@ -44,7 +44,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Lokasi 2 :
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Rata - Rata Tempat Sampah Lokasi II :
                                 </div>
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                     {{ $polnep->volumetotaledge }}%</div>
@@ -80,7 +80,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Lokasi 3 :
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Rata - Rata Tempat Sampah Lokasi III :
                                 </div>
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                     {{ $rusunawa->volumetotaledge }}%</div>
@@ -117,7 +117,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Edge Lokasi 4 :
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume Rata - Rata Tempat Sampah Lokasi IV :
                                 </div>
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">{{ $total_siskom }}%
                                 </div>

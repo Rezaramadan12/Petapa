@@ -52,12 +52,12 @@ class MapsController extends Controller
             'untan' => [
                 'model' => 'untan',
                 'volume' => $data['untan']->volumetotaledge,
-                'jarak' => 3,
+                'jarak' => 2,
             ],
             'siskom' => [
                 'model' => 'siskom',
                 'volume' => $data['total_siskom'],
-                'jarak' => 2,
+                'jarak' => 3,
             ],
             'rusunawa' => [
                 'model' => 'rusunawa',

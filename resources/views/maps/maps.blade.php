@@ -74,7 +74,7 @@
                             var locations = [{
                                     "lat": -0.060109,
                                     "lng": 109.345409,
-                                    "name": 'Lokasi 1',
+                                    "name": 'I',
                                     "volumeorganik": {{ $untan->volumeorganik }},
                                     "volumenonorganik": {{ $untan->volumenonorganik }},
                                     "volumeB3": {{ $untan->volumeB3 }},
@@ -85,7 +85,7 @@
                                 {
                                     "lat": -0.062003,
                                     "lng": 109.348687,
-                                    "name": 'Lokasi 3',
+                                    "name": 'III',
                                     "volumeorganik": {{ $rusunawa->volumeorganik }},
                                     "volumenonorganik": {{ $rusunawa->volumenonorganik }},
                                     "volumeB3": {{ $rusunawa->volumeB3 }},
@@ -95,7 +95,7 @@
                                 {
                                     "lat": -0.053803,
                                     "lng": 109.347326,
-                                    "name": 'Lokasi 2',
+                                    "name": 'II',
                                     "volumeorganik": {{ $polnep->volumeorganik }},
                                     "volumenonorganik": {{ $polnep->volumenonorganik }},
                                     "volumeB3": {{ $polnep->volumeB3 }},
@@ -207,7 +207,7 @@
                             var siskom = [{
                                 "lat": -0.0571164,
                                 "lng": 109.3452931,
-                                "name": 'Lokasi 4',
+                                "name": 'IV',
                                 "volumeorganik": {{ $siskom_tps1->kapasitas }},
                                 "volumenonorganik": {{ $siskom_tps2->kapasitas }},
                                 "volumetotaledge": {{ $total_siskom }},
