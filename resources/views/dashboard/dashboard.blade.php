@@ -194,18 +194,18 @@
                                                             <div class="modal-body">
                                                                 <p style="margin-bottom: 1px;">Volume Tempat Sampah 1:</p>
                                                                 <div class="progress" style="margin-bottom: 10px;">
-                                                                    @if ($polnep->volumeorganik <= 33)
+                                                                    @if ($polnep->volumenonorganik <= 33)
                                                                         <div class="progress-bar"
-                                                                            style="width: {{ $polnep->volumeorganik }}%; background-color: #2ecc71;">
-                                                                            {{ $polnep->volumeorganik }}%</div>
-                                                                    @elseif($polnep->volumetotaledge <= 66)
+                                                                            style="width: {{ $polnep->volumenonorganik }}%; background-color: #2ecc71;">
+                                                                            {{ $polnep->volumenonorganik }}%</div>
+                                                                    @elseif($polnep->volumenonorganik <= 66)
                                                                         <div class="progress-bar"
-                                                                            style="width: {{ $polnep->volumeorganik }}%; background-color: #f1c40f;">
-                                                                            {{ $polnep->volumeorganik }}%</div>
+                                                                            style="width: {{ $polnep->volumenonorganik }}%; background-color: #f1c40f;">
+                                                                            {{ $polnep->volumenonorganik }}%</div>
                                                                     @else
                                                                         <div class="progress-bar"
-                                                                            style="width: {{ $polnep->volumeorganik }}%; background-color: #e74c3c">
-                                                                            {{ $polnep->volumeorganik }}%</div>
+                                                                            style="width: {{ $polnep->volumenonorganik }}%; background-color: #e74c3c;">
+                                                                            {{ $polnep->volumenonorganik }}%</div>
                                                                     @endif
                                                                 </div>
                                                                 <p style="margin-bottom: 1px;">Volume Tempat Sampah 2:</p>
