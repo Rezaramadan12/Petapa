@@ -62,7 +62,7 @@
                                 fullscreenControl: {
                                     pseudoFullscreen: false
                                 }
-                            }).setView([-0.055324, 109.349498], 16);
+                            }).setView([-0.056986, 109.349103], 16);
 
                             L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
                                 maxZoom: 20,
