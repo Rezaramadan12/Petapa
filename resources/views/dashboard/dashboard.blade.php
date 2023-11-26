@@ -204,7 +204,7 @@
                                                                             {{ $polnep->volumeorganik }}%</div>
                                                                     @else
                                                                         <div class="progress-bar"
-                                                                            style="width: {{ $polnep->volumeorganik }}%; background-color: #f1c40f">
+                                                                            style="width: {{ $polnep->volumeorganik }}%; background-color: #e74c3c">
                                                                             {{ $polnep->volumeorganik }}%</div>
                                                                     @endif
                                                                 </div>
