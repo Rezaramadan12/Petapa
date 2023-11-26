@@ -53,7 +53,7 @@
                                                 </div>
                                                 <!-- Add Details Button -->
                                                 <button type="button" class="btn btn-sm btn-info mt-2"
-                                                    style="font-size: 8px;" data-toggle="modal"
+                                                    style="font-size: 10px;" data-toggle="modal"
                                                     data-target="#detailsModal{{ $untan->id }}">
                                                     Details Volume Sampah
                                                 </button>
@@ -170,7 +170,7 @@
                                                 </div>
                                                 <!-- Add Details Button -->
                                                 <button type="button" class="btn btn-sm btn-info mt-2"
-                                                    style="font-size: 8px;" data-toggle="modal"
+                                                    style="font-size: 10px;" data-toggle="modal"
                                                     data-target="#detailsModal{{ $polnep->id }}">
                                                     Details Volume Sampah
                                                 </button>
@@ -286,7 +286,7 @@
                                                 </div>
                                                 <!-- Add Details Button -->
                                                 <button type="button" class="btn btn-sm btn-info mt-2"
-                                                    style="font-size: 8px;" data-toggle="modal"
+                                                    style="font-size: 10px;" data-toggle="modal"
                                                     data-target="#detailsModal{{ $rusunawa->id }}">
                                                     Details Volume Sampah
                                                 </button>
@@ -403,7 +403,7 @@
                                                 </div>
                                                 <!-- Add Details Button -->
                                                 <button type="button" class="btn btn-sm btn-info mt-2"
-                                                    style="font-size: 8px;" data-toggle="modal"
+                                                    style="font-size: 10px;" data-toggle="modal"
                                                     data-target="#detailsModal{{ $siskom_tps1->kapasitas }}_{{ $siskom_tps2->kapasitas }}">
                                                     Details Volume Sampah
                                                 </button>
