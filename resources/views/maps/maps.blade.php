@@ -166,8 +166,8 @@
 
 
                                 var popupContent = `
-                                    <b>Prioritas pengambilan ke :</b> ${locations[i].ranking}<br>
-                                    <b>Nama Lokasi:</b> ${locations[i].name}<br>
+                                    <b>Prioritas pengambilan ke: </b><strong>${locations[i].ranking}</strong> <br>
+                                    <b>Nama Lokasi: </b> <strong>${locations[i].name}</strong><br>
                                     <div class="progress-container">
                                         <div class="volume-label">Tempat Sampah 1: ${locations[i].volumeorganik}%</div>
                                         <div class="progress">
@@ -220,8 +220,8 @@
 
 
                             var popupSiskom = `
-                                    <b>Prioritas pengambilan ke :</b> ${siskom[0].ranking}<br>
-                                    <b>Nama Lokasi:</b> ${siskom[0].name}<br>
+                                    <b>Prioritas pengambilan ke: </b><strong>${siskom[0].ranking}</strong> <br>
+                                    <b>Nama Lokasi:</b> <strong>${siskom[0].name}</strong> <br>
                                     <div class="progress-container">
                                         <div class="volume-label">Tempat Sampah 1: ${siskom[0].volumeorganik}%</div>
                                         <div class="progress">
