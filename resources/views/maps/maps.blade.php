@@ -12,9 +12,10 @@
                         <i class="fas fa-fw fa-home"></i>
                         <span>Dashboard</span></a>
 
-                    <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada Marker Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
+                    <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada Marker
+                        Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
 
-                    <h6 class="m-0 font-weight-bold " style="color: black;" >Peta Tempat Sampah</h6>
+                    <h6 class="m-0 font-weight-bold " style="color: black;">Peta Tempat Sampah</h6>
                 </div>
 
                 <!-- Card Body -->
@@ -24,7 +25,7 @@
                         <title>PETAPA (Pemantauan Tempat Sampah)</title>
                         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
                         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-                        <script>
+                        {{-- <script>
                             // Fungsi untuk melakukan refresh halaman setiap 5 menit (300,000 milidetik)
                             function autoRefresh() {
                                 location.reload();
@@ -32,7 +33,7 @@
 
                             // Atur interval refresh
                             setTimeout(autoRefresh, 10000); // 300,000 ms = 5 menit
-                        </script>
+                        </script> --}}
 
 
 
@@ -116,7 +117,7 @@
 
                                 var iconUrl = '';
 
-                                 // Menentukan jenis ikon marker berdasarkan ranking dan persentase volumetotaledge
+                                // Menentukan jenis ikon marker berdasarkan ranking dan persentase volumetotaledge
                                 if (ranking === 1) {
                                     if (volumetotaledgePercentage <= 33) {
                                         iconUrl = '{{ asset('assets/img/tpshijau1.png') }}'; // Ikon hijau untuk ranking 1 dan volume rendah
@@ -159,32 +160,34 @@
                                     popupAnchor: [-3, -76]
                                 });
 
-                                var marker = L.marker([locations[i].lat, locations[i].lng],{icon: warnaIcon}).addTo(map);
+                                var marker = L.marker([locations[i].lat, locations[i].lng], {
+                                    icon: warnaIcon
+                                }).addTo(map);
 
 
                                 var popupContent = `
                                     <b>Prioritas pengambilan ke :</b> ${locations[i].ranking}<br>
                                     <b>Nama Lokasi:</b> ${locations[i].name}<br>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume Organik: ${locations[i].volumeorganik}%</div>
+                                        <div class="volume-label">Tempat Sampah 1: ${locations[i].volumeorganik}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(locations[i].volumeorganik)}" style="width: ${locations[i].volumeorganik}%;"></div>
                                         </div>
                                     </div>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume Nonorganik: ${locations[i].volumenonorganik}%</div>
+                                        <div class="volume-label">Tempat Sampah 2: ${locations[i].volumenonorganik}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(locations[i].volumenonorganik)}" style="width: ${locations[i].volumenonorganik}%;"></div>
                                         </div>
                                     </div>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume B3: ${locations[i].volumeB3}%</div>
+                                        <div class="volume-label">Tempat Sampah 3: ${locations[i].volumeB3}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(locations[i].volumeB3)}" style="width: ${locations[i].volumeB3}%;"></div>
                                         </div>
                                     </div>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume Total Edge: ${locations[i].volumetotaledge}%</div>
+                                        <div class="volume-label">Volume Rata - Rata: ${locations[i].volumetotaledge}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(locations[i].volumetotaledge)}" style="width: ${locations[i].volumetotaledge}%;"></div>
                                         </div>
@@ -220,19 +223,19 @@
                                     <b>Prioritas pengambilan ke :</b> ${siskom[0].ranking}<br>
                                     <b>Nama Lokasi:</b> ${siskom[0].name}<br>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume Organik: ${siskom[0].volumeorganik}%</div>
+                                        <div class="volume-label">Tempat Sampah 1: ${siskom[0].volumeorganik}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(siskom[0].volumeorganik)}" style="width: ${siskom[0].volumeorganik}%;"></div>
                                         </div>
                                     </div>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume Nonorganik: ${siskom[0].volumenonorganik}%</div>
+                                        <div class="volume-label">Tempat Sampah 2: ${siskom[0].volumenonorganik}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(siskom[0].volumenonorganik)}" style="width: ${siskom[0].volumenonorganik}%;"></div>
                                         </div>
                                     </div>
                                     <div class="progress-container">
-                                        <div class="volume-label">Volume Total Edge: ${siskom[0].volumetotaledge}%</div>
+                                        <div class="volume-label">Volume Rata - Rata: ${siskom[0].volumetotaledge}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(siskom[0].volumetotaledge)}" style="width: ${siskom[0].volumetotaledge}%;"></div>
                                         </div>
@@ -248,58 +251,120 @@
                                 }
                             }
                             var volumetotaledge = siskom[0].volumetotaledge;
-                                var ranking = siskom[0].ranking;
+                            var ranking = siskom[0].ranking;
 
-                                // Hitung persentase volumetotaledge terhadap 100%
-                                var volumetotaledgePercentage = (volumetotaledge / 100) * 100;
+                            // Hitung persentase volumetotaledge terhadap 100%
+                            var volumetotaledgePercentage = (volumetotaledge / 100) * 100;
 
-                                var iconUrl = '';
+                            var iconUrl = '';
 
-                                 // Menentukan jenis ikon marker berdasarkan ranking dan persentase volumetotaledge
-                                if (ranking === 1) {
-                                    if (volumetotaledgePercentage <= 33) {
-                                        iconUrl = '{{ asset('assets/img/tpshijau1.png') }}'; // Ikon hijau untuk ranking 1 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66) {
-                                        iconUrl = '{{ asset('assets/img/tpskuning1.png') }}'; // Ikon kuning untuk ranking 1 dan volume sedang
-                                    } else {
-                                        iconUrl = '{{ asset('assets/img/tpsmerah1.png') }}'; // Ikon merah untuk ranking 1 dan volume tinggi
-                                    }
-                                } else if (ranking === 2) {
-                                    if (volumetotaledgePercentage <= 33) {
-                                        iconUrl = '{{ asset('assets/img/tpshijau2.png') }}'; // Ikon hijau untuk ranking 2 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66) {
-                                        iconUrl = '{{ asset('assets/img/tpskuning2.png') }}'; // Ikon kuning untuk ranking 2 dan volume sedang
-                                    } else {
-                                        iconUrl = '{{ asset('assets/img/tpsmerah2.png') }}'; // Ikon merah untuk ranking 2 dan volume tinggi
-                                    }
-                                } else if (ranking === 3) {
-                                    if (volumetotaledgePercentage <= 33) {
-                                        iconUrl = '{{ asset('assets/img/tpshijau3.png') }}'; // Ikon hijau untuk ranking 3 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66) {
-                                        iconUrl = '{{ asset('assets/img/tpskuning3.png') }}'; // Ikon kuning untuk ranking 3 dan volume sedang
-                                    } else {
-                                        iconUrl = '{{ asset('assets/img/tpsmerah3.png') }}'; // Ikon merah untuk ranking 3 dan volume tinggi
-                                    }
-                                } else if (ranking === 4) {
-                                    if (volumetotaledgePercentage <= 33) {
-                                        iconUrl = '{{ asset('assets/img/tpshijau4.png') }}'; // Ikon hijau untuk ranking 4 dan volume rendah
-                                    } else if (volumetotaledgePercentage <= 66) {
-                                        iconUrl = '{{ asset('assets/img/tpskuning4.png') }}'; // Ikon kuning untuk ranking 4 dan volume sedang
-                                    } else {
-                                        iconUrl = '{{ asset('assets/img/tpsmerah4.png') }}'; // Ikon merah untuk ranking 4 dan volume tinggi
-                                    }
+                            // Menentukan jenis ikon marker berdasarkan ranking dan persentase volumetotaledge
+                            if (ranking === 1) {
+                                if (volumetotaledgePercentage <= 33) {
+                                    iconUrl = '{{ asset('assets/img/tpshijau1.png') }}'; // Ikon hijau untuk ranking 1 dan volume rendah
+                                } else if (volumetotaledgePercentage <= 66) {
+                                    iconUrl = '{{ asset('assets/img/tpskuning1.png') }}'; // Ikon kuning untuk ranking 1 dan volume sedang
+                                } else {
+                                    iconUrl = '{{ asset('assets/img/tpsmerah1.png') }}'; // Ikon merah untuk ranking 1 dan volume tinggi
                                 }
+                            } else if (ranking === 2) {
+                                if (volumetotaledgePercentage <= 33) {
+                                    iconUrl = '{{ asset('assets/img/tpshijau2.png') }}'; // Ikon hijau untuk ranking 2 dan volume rendah
+                                } else if (volumetotaledgePercentage <= 66) {
+                                    iconUrl = '{{ asset('assets/img/tpskuning2.png') }}'; // Ikon kuning untuk ranking 2 dan volume sedang
+                                } else {
+                                    iconUrl = '{{ asset('assets/img/tpsmerah2.png') }}'; // Ikon merah untuk ranking 2 dan volume tinggi
+                                }
+                            } else if (ranking === 3) {
+                                if (volumetotaledgePercentage <= 33) {
+                                    iconUrl = '{{ asset('assets/img/tpshijau3.png') }}'; // Ikon hijau untuk ranking 3 dan volume rendah
+                                } else if (volumetotaledgePercentage <= 66) {
+                                    iconUrl = '{{ asset('assets/img/tpskuning3.png') }}'; // Ikon kuning untuk ranking 3 dan volume sedang
+                                } else {
+                                    iconUrl = '{{ asset('assets/img/tpsmerah3.png') }}'; // Ikon merah untuk ranking 3 dan volume tinggi
+                                }
+                            } else if (ranking === 4) {
+                                if (volumetotaledgePercentage <= 33) {
+                                    iconUrl = '{{ asset('assets/img/tpshijau4.png') }}'; // Ikon hijau untuk ranking 4 dan volume rendah
+                                } else if (volumetotaledgePercentage <= 66) {
+                                    iconUrl = '{{ asset('assets/img/tpskuning4.png') }}'; // Ikon kuning untuk ranking 4 dan volume sedang
+                                } else {
+                                    iconUrl = '{{ asset('assets/img/tpsmerah4.png') }}'; // Ikon merah untuk ranking 4 dan volume tinggi
+                                }
+                            }
 
-                                var warnaIcon2 = L.icon({
-                                    iconUrl: iconUrl,
-                                    iconSize: [50, 90],
-                                    shadowSize: [50, 64],
-                                    iconAnchor: [22, 94],
-                                    popupAnchor: [-3, -76]
+                            var warnaIcon2 = L.icon({
+                                iconUrl: iconUrl,
+                                iconSize: [50, 90],
+                                shadowSize: [50, 64],
+                                iconAnchor: [22, 94],
+                                popupAnchor: [-3, -76]
+                            });
+
+                            var customIconUrl = iconUrl = '{{ asset('assets/img/tps.png') }}';
+
+                            // Buat objek ikon dengan gambar kustom
+                            var customIcon = L.icon({
+                                iconUrl: customIconUrl,
+                                iconSize: [20, 30], // Sesuaikan ukuran ikon sesuai kebutuhan
+                                iconAnchor: [25, 50], // Posisi pusat bawah ikon, sesuaikan sesuai kebutuhan
+                                popupAnchor: [0, -50] // Posisi popup di atas ikon, sesuaikan sesuai kebutuhan
+                            });
+
+                            var mainMarker = L.marker([siskom[0].lat, siskom[0].lng], {
+                                icon: warnaIcon2
+                            }).addTo(map);
+
+                            var additionalMarkersGroup = L.layerGroup(); // Layer group to manage additional markers
+
+                            mainMarker.on('click', function(e) {
+                                var clickedLatLng = e.latlng;
+
+                                var additionalMarkerPositions = [{
+                                        lat: -0.056945,
+                                        lng: 109.344877,
+                                        name: 'tps 1'
+                                    },
+                                    {
+                                        lat: -0.05727264036144048,
+                                        lng: 109.3452504530016,
+                                        name: 'tps 2'
+                                    }
+                                    // Add more positions as needed
+                                ];
+
+                                // Add additional markers to the layer group
+                                additionalMarkerPositions.forEach(function(position) {
+                                    var newMarker = L.marker([position.lat, position.lng], {
+                                        icon: customIcon
+                                    });
+                                    newMarker.bindPopup(`<b>${position.name}</b><br>${popupSiskom}`);
+
+                                    additionalMarkersGroup.addLayer(newMarker);
+
+                                    // newMarker.on('click', function() {
+                                    //     newMarker.openPopup();
+                                    // });
                                 });
 
-                            L.marker([siskom[0].lat, siskom[0].lng],{icon: warnaIcon2}).addTo(map)
-                                .bindPopup(popupSiskom)
+                                // Add the layer group to the map
+                                map.addLayer(additionalMarkersGroup);
+                            });
+                            additionalMarkersGroup.on('click', function(event) {
+                                event.layer.openPopup();
+                            });
+
+                            // Close the additional markers when clicking elsewhere on the map
+                            map.on('click', function(e) {
+                                // Remove the layer group from the map
+                                map.removeLayer(additionalMarkersGroup);
+                            });
+
+                            // Close the additional markers when closing the main marker popup
+                            mainMarker.bindPopup(popupSiskom).on('popupclose', function() {
+                                map.removeLayer(additionalMarkersGroup);
+                            });
+                            // .bindPopup(popupSiskom)
                             // .openPopup();
                         </script>
 

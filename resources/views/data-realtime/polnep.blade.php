@@ -17,10 +17,10 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Volume Organik</th>
-                                <th>Volume Nonorganik</th>
-                                <th>Volume B3</th>
-                                <th>Total Volume Edge</th>
+                                <th>Tempat Sampah 1</th>
+                                <th>Tempat Sampah 2</th>
+                                <th>Tempat Sampah 3</th>
+                                <th>Volume Rata - Rata</th>
                                 <th>Keterangan</th>
                                 <th>Log</th>
                             </tr>
