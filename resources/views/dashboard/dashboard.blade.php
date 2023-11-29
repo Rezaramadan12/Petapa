@@ -7,7 +7,7 @@
                 <div class="card shadow mb-2">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
-                        <h6 class="m-0 font-weight-bold text-primary text-center">Pemantauan Volume Sampah Pada Empat Titik Lokasi Yang Berbeda</h6>
+                        <h6 class="m-0 font-weight-bold text-primary text-center">Pemantauan Volume Tempat Sampah Pada Empat Titik Lokasi Yang Berbeda</h6>
                         {{-- <div class="dropdown no-arrow">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,7 +34,7 @@
                                             <div class="col mr-2">
                                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume
                                                     Rata - Rata
-                                                    Sampah Lokasi I :</div>
+                                                    Sampah Untan :</div>
                                                 <!-- Add Progres Bar -->
                                                 <div class="progress">
                                                     @if ($untan->volumetotaledge <= 33)
@@ -150,7 +150,7 @@
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
                                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume
-                                                    Rata - Rata Sampah Lokasi II :
+                                                    Rata - Rata Sampah Polnep :
                                                 </div>
                                                 <!-- Add Progres Bar -->
                                                 <div class="progress">
@@ -266,7 +266,7 @@
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
                                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume
-                                                    Rata - Rata Sampah Lokasi III :
+                                                    Rata - Rata Sampah Rusunawa :
                                                 </div>
                                                 <!-- Add Progres Bar -->
                                                 <div class="progress">
@@ -383,7 +383,7 @@
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
                                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Volume
-                                                    Rata - Rata Sampah Lokasi IV :
+                                                    Rata - Rata Sampah Siskom :
                                                 </div>
                                                 <!-- Add Progres Bar -->
                                                 <div class="progress">
