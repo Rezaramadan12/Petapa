@@ -15,7 +15,9 @@
                     <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada Marker
                         Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
 
-                    <h6 class="m-0 font-weight-bold " style="color: black;">Peta Tempat Sampah</h6>
+                    <button class="btn btn-dark font-weight-bold" id="login">
+    <i class="fas fa-sign-in-alt"></i> Login
+</button>
                 </div>
 
                 <!-- Card Body -->
@@ -34,6 +36,13 @@
                             // Atur interval refresh
                             setTimeout(autoRefresh, 10000); // 300,000 ms = 5 menit
                         </script> --}}
+                        <script>
+                            document.getElementById('login').addEventListener('click', function() {
+                                // Ganti URL login sesuai dengan rute login Anda
+                                window.location.href = '/login';
+                            });
+                        </script>
+
 
 
 
@@ -399,14 +408,14 @@
 
 
                             var rusunawa = [{
-                                    "lat": -0.062003,
-                                    "lng": 109.348687,
-                                    "name": 'Rusunawa',
-                                    "volumeorganik": {{ $rusunawa->volumeorganik }},
-                                    "volumenonorganik": {{ $rusunawa->volumenonorganik }},
-                                    "volumeB3": {{ $rusunawa->volumeB3 }},
-                                    "volumetotaledge": {{ $rusunawa->volumetotaledge }},
-                                    "ranking": {{ $rankRusunawa['ranking'] }},
+                                "lat": -0.062003,
+                                "lng": 109.348687,
+                                "name": 'Rusunawa',
+                                "volumeorganik": {{ $rusunawa->volumeorganik }},
+                                "volumenonorganik": {{ $rusunawa->volumenonorganik }},
+                                "volumeB3": {{ $rusunawa->volumeB3 }},
+                                "volumetotaledge": {{ $rusunawa->volumetotaledge }},
+                                "ranking": {{ $rankRusunawa['ranking'] }},
                             }, ];
 
 
@@ -525,7 +534,7 @@
                                     {
                                         lat: -0.06225439873922257,
                                         lng: 109.34814091302509,
-                                        name:'tps 3'
+                                        name: 'tps 3'
                                     }
                                     // Add more positions as needed
                                 ];
