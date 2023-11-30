@@ -1,6 +1,6 @@
-@extends('layouts.head')
+@extends('layouts.main')
 
-{{-- @section('container') --}}
+@section('container')
 <div class="col-xl-12 col-lg-4">
     <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
@@ -59,5 +59,19 @@
         </div>
     </div>
 </div>
-@include('layouts.script')
-{{-- @endsection --}}
+<!-- Tambahkan script jQuery sebelum tag penutup </body> -->
+{{-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Tambahkan script berikut -->
+<script>
+    $(document).ready(function () {
+        // Tangani klik pada tombol toggle
+        $("#sidebarToggle").click(function () {
+            // Toggle class 'toggled' pada elemen sidebar
+            $("#accordionSidebar").toggleClass("toggled");
+        });
+    });
+</script> --}}
+
+{{-- @include('layouts.script') --}}
+@endsection

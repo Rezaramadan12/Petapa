@@ -16,8 +16,8 @@
                         Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
 
                     <button class="btn btn-dark font-weight-bold" id="login">
-    <i class="fas fa-sign-in-alt"></i> Login
-</button>
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
                 </div>
 
                 <!-- Card Body -->
@@ -546,12 +546,12 @@
                                     });
                                     newmarker3.bindPopup(`<b>${position.name}</b><br>${popupRusunawa}`);
 
-                                    markergrup3.addLayer(newmarker3);
+                                        markergrup3.addLayer(newmarker3);
 
-                                    // newMarker.on('click', function() {
-                                    //     newMarker.openPopup();
-                                    // });
-                                });
+                                        // newMarker.on('click', function() {
+                                        //     newMarker.openPopup();
+                                        // });
+                                    });
 
                                 // Add the layer group to the map
                                 map.addLayer(markergrup3);

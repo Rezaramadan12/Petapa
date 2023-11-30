@@ -17,13 +17,38 @@
             <i class="fas fa-fw fa-home"></i>
             <span>Dashboard</span></a>
     </li>
-
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    <li class="nav-item ">
+        <a class="nav-link" href="/untan">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Untan</span></a>
+    </li>
+    <li class="nav-item ">
+        <a class="nav-link" href="/polnep">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Polnep</span></a>
+    </li>
+    <li class="nav-item ">
+        <a class="nav-link" href="/rusunawa">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Rusunawa</span></a>
+    </li>
+    <li class="nav-item ">
+        <a class="nav-link" href="/siskom">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Siskom</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/maps">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Peta Tempat Sampah</span>
+        </a>
+    </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-chart-line"></i>
@@ -37,44 +62,18 @@
                 <a class="collapse-item" href="{{ url('/siskom') }}">SISKOM</a>
             </div>
         </div>
-    </li>
-
-    {{-- <li class="nav-item">
-                <a class="nav-link" href="/maps">
-                    <i class="fas fa-fw fa-map"></i>
-                    <span>Maps</span>
-                </a>
-            </li> --}}
-    <li class="nav-item">
-        <a class="nav-link" href="/maps">
-            <i class="fas fa-fw fa-map"></i>
-            <span>Peta Tempat Sampah</span>
-        </a>
-    </li>
-    <li class="nav-item">
-    <form action="/logout" method="post" class="nav-link">
+    </li> --}}
+    {{-- <li class="nav-item"> --}}
+    {{-- <form action="/logout" method="post" class="nav-link">
         @csrf
         <button type="submit" class="btn btn-danger">
             <i class="fas fa-fw fa-sign-out-alt"></i>
             <span>Logout</span>
         </button>
-    </form>
+    </form> --}}
 </li>
-
-    <!-- Nav Item - Charts -->
-    {{-- <li class="nav-item">
-                <a class="nav-link" href="/rutepengangkutan">
-                    <i class="fas fa-fw fa-truck"></i>
-                    <span>Rute Pengangkutan</span>
-                </a>
-            </li> --}}
-
-
-
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
-
-
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>

@@ -1,13 +1,13 @@
-@extends('layouts.head')
+@extends('layouts.main')
 
-{{-- @section('container') --}}
+@section('container')
     <div class="col-xl-12 col-lg-4">
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <a class="nav-link" href="/dashboard">
-                        <i class="fas fa-fw fa-home"></i>
-                        <span>Dashboard</span></a>
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Dashboard</span></a>
                 <h6 class="m-0 font-weight-bold text-primary">Data Real-Time Lokasi I</h6>
             </div>
             <!-- Card Body -->
@@ -32,13 +32,15 @@
                                     <td>{{ $data->volumeorganik }} %</td>
                                     <td>{{ $data->volumenonorganik }} %</td>
                                     <td>{{ $data->volumeB3 }} %</td>
-                                    <td>{{ $data->volumetotaledge}} %</td>
+                                    <td>{{ $data->volumetotaledge }} %</td>
                                     <td>
                                         <div class="d-flex justify-content-end flex-shrink-0">
-                                            @if ($data->volumetotaledge<=33)
-                                                <span class="badge badge-pill badge-success fw-bolder px-4 py-2">Sedikit</span>
-                                            @elseif ($data->volumetotaledge <=66)
-                                                <span class="badge badge-pill badge-warning fw-bolder px-4 py-2">Sedang</span>
+                                            @if ($data->volumetotaledge <= 33)
+                                                <span
+                                                    class="badge badge-pill badge-success fw-bolder px-4 py-2">Sedikit</span>
+                                            @elseif ($data->volumetotaledge <= 66)
+                                                <span
+                                                    class="badge badge-pill badge-warning fw-bolder px-4 py-2">Sedang</span>
                                             @else
                                                 <span class="badge badge-pill badge-danger fw-bolder px-4 py-2">Penuh</span>
                                             @endif
@@ -54,5 +56,19 @@
             </div>
         </div>
     </div>
-    @include('layouts.script')
-{{-- @endsection --}}
+    <!-- Tambahkan script jQuery sebelum tag penutup </body> -->
+    {{-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Tambahkan script berikut -->
+    <script>
+        $(document).ready(function() {
+            // Tangani klik pada tombol toggle
+            $("#sidebarToggle").click(function() {
+                // Toggle class 'toggled' pada elemen sidebar
+                $("#accordionSidebar").toggleClass("toggled");
+            });
+        });
+    </script> --}}
+
+    {{-- @include('layouts.script') --}}
+@endsection

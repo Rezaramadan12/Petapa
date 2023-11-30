@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="container-fluid">
-        <div class="row mt-4">
+    {{-- <div class="container-fluid"> --}}
+        {{-- <div class="row"> --}}
             <div class="col-xl-12 col-lg-4">
                 <div class="card shadow mb-2">
                     <!-- Card Header - Dropdown -->
@@ -484,6 +484,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        {{-- </div> --}}
+    {{-- </div> --}}
 @endsection
