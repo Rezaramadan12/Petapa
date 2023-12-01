@@ -6,19 +6,121 @@
         <div class="col-xl-12 col-lg-4">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
-                <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
+                {{-- <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between"> --}}
 
-                    <a class="font-weight-bold  nav-link" href="/dashboard" style="color: black;">
+                {{-- <a class="font-weight-bold  nav-link" href="/dashboard" style="color: black;">
                         <i class="fas fa-fw fa-home"></i>
-                        <span>Dashboard</span></a>
+                        <span>Dashboard</span></a> --}}
 
-                    <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada Marker
-                        Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
+                {{-- <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada Marker
+                        Merupakan Urutan Prioritas Pengangkutan Sampah</h6> --}}
 
-                    <button class="btn btn-dark font-weight-bold" id="login">
+                {{-- <button class="btn btn-dark font-weight-bold" id="login">
                         <i class="fas fa-sign-in-alt"></i> Login
-                    </button>
+                    </button> --}}
+                <!-- Topbar -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-0 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        {{-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button> --}}
+
+                        <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada
+                            Marker
+                            Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
+
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                        <?php echo auth()->check() ? auth()->user()->name : 'Akun'; ?>
+                                    </span>
+                                    <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <?php if (auth()->check()): ?>
+                                    <!-- Jika sudah login -->
+                                    <a class="dropdown-item" href="/dashboard">
+                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Dashboard
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal"
+                                        data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                    <?php else: ?>
+                                    <!-- Jika belum login -->
+                                    <a class="dropdown-item" href="/login">
+                                        <i class="fas fa-sign-in-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Login
+                                    </a>
+                                    <?php endif; ?>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <!-- Content Row -->
+                        <div class="row">
+                            <!-- Area Chart -->
+                            @yield('container')
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Logout Modal-->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                    <i class="fas fa-fw fa-times"></i>
+                                    <span>Cancel</span>
+                                </button>
+                                <form action="/logout" method="post" class="nav-link">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-fw fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- </div> --}}
 
                 <!-- Card Body -->
                 <div class="card-body">
@@ -546,12 +648,12 @@
                                     });
                                     newmarker3.bindPopup(`<b>${position.name}</b><br>${popupRusunawa}`);
 
-                                        markergrup3.addLayer(newmarker3);
+                                    markergrup3.addLayer(newmarker3);
 
-                                        // newMarker.on('click', function() {
-                                        //     newMarker.openPopup();
-                                        // });
-                                    });
+                                    // newMarker.on('click', function() {
+                                    //     newMarker.openPopup();
+                                    // });
+                                });
 
                                 // Add the layer group to the map
                                 map.addLayer(markergrup3);
@@ -741,5 +843,6 @@
         </div>
     </div>
 </div>
+@include('layouts.script')
 @include('layouts.footer')
 {{-- @endsection --}}

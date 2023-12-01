@@ -8,7 +8,7 @@
                 {{-- <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a> --}}
-                <h6 class="m-0 font-weight-bold text-primary">Data Real-Time Polnep</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Data Real-Time </h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -71,4 +71,15 @@
     </script> --}}
 
     {{-- @include('layouts.script') --}}
+    {{-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Fungsi untuk menampilkan popup selamat datang
+            function showWelcomePopup() {
+                alert('Selamat datang di website kami!');
+            }
+
+            // Panggil fungsi saat halaman dimuat
+            showWelcomePopup();
+        });
+    </script> --}}
 @endsection
