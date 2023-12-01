@@ -12,20 +12,57 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item" style="transition: background-color 0.3s;">
+        <a class="nav-link" href="/dashboard" onmouseover="this.style.backgroundColor='#ffd700'"
+            onmouseout="this.style.backgroundColor='transparent'">
+            <i class="fas fa-fw fa-home"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    {{-- <li class="nav-item active">
         <a class="nav-link" href="/dashboard">
             <i class="fas fa-fw fa-home"></i>
             <span>Dashboard</span></a>
-    </li>
+    </li> --}}
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <li class="nav-item ">
-        <a class="nav-link" href="/untan">
+    <li class="nav-item" style="transition: background-color 0.3s;">
+        <a class="nav-link" href="/untan" onmouseover="this.style.backgroundColor='#ffd700'"
+            onmouseout="this.style.backgroundColor='transparent'">
             <i class="fas fa-fw fa-chart-line"></i>
-            <span>Untan</span></a>
+            <span>Untan</span>
+        </a>
     </li>
-    <li class="nav-item ">
+    <li class="nav-item" style="transition: background-color 0.3s;">
+        <a class="nav-link" href="/polnep" onmouseover="this.style.backgroundColor='#ffd700'"
+            onmouseout="this.style.backgroundColor='transparent'">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Polnep</span>
+        </a>
+    </li>
+    <li class="nav-item" style="transition: background-color 0.3s;">
+        <a class="nav-link" href="/rusunawa" onmouseover="this.style.backgroundColor='#ffd700'"
+            onmouseout="this.style.backgroundColor='transparent'">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Rusunawa</span>
+        </a>
+    </li>
+    <li class="nav-item" style="transition: background-color 0.3s;">
+        <a class="nav-link" href="/siskom" onmouseover="this.style.backgroundColor='#ffd700'"
+            onmouseout="this.style.backgroundColor='transparent'">
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Siskom</span>
+        </a>
+    </li>
+    <li class="nav-item" style="transition: background-color 0.3s;">
+        <a class="nav-link" href="/maps" onmouseover="this.style.backgroundColor='#ffd700'"
+            onmouseout="this.style.backgroundColor='transparent'">
+            <i class="fas fa-fw fa-map"></i>
+            <span>Peta Tempat Sampah</span>
+        </a>
+    </li>
+    {{-- <li class="nav-item ">
         <a class="nav-link" href="/polnep">
             <i class="fas fa-fw fa-chart-line"></i>
             <span>Polnep</span></a>
@@ -45,7 +82,7 @@
             <i class="fas fa-fw fa-map"></i>
             <span>Peta Tempat Sampah</span>
         </a>
-    </li>
+    </li> --}}
 
     <!-- Nav Item - Pages Collapse Menu -->
     {{-- <li class="nav-item">
@@ -71,7 +108,7 @@
             <span>Logout</span>
         </button>
     </form> --}}
-</li>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
     <div class="text-center d-none d-md-inline">
