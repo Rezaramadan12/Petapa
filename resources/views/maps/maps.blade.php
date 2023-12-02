@@ -28,10 +28,14 @@
                         {{-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                             <i class="fa fa-bars"></i>
                         </button> --}}
-
-                        <h6 class="m-0 font-weight-bold" style="color: black; text-decoration: underline;">Angka Pada
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
+                            <h6 class="m-0 font-weight-bold text-primary text-center">Angka Pada
                             Marker
                             Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
+                        </div>
+                        {{-- <h6 class="m-0 font-weight-bold primary-text center-text">Angka Pada
+                            Marker
+                            Merupakan Urutan Prioritas Pengangkutan Sampah</h6> --}}
 
 
                         <!-- Topbar Navbar -->
@@ -56,6 +60,22 @@
                                     <a class="dropdown-item" href="/dashboard">
                                         <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Dashboard
+                                    </a>
+                                    <a class="dropdown-item" href="/untan">
+                                        <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
+                                        Data Untan
+                                    </a>
+                                    <a class="dropdown-item" href="/polnep">
+                                        <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
+                                        Data Polnep
+                                    </a>
+                                    <a class="dropdown-item" href="/rusunawa">
+                                        <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
+                                        Data Rusunawa
+                                    </a>
+                                    <a class="dropdown-item" href="/siskom">
+                                        <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
+                                        Data Siskom
                                     </a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#" data-toggle="modal"
