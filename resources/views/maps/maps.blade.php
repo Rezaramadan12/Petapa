@@ -28,11 +28,12 @@
                         {{-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                             <i class="fa fa-bars"></i>
                         </button> --}}
-                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
-                            <h6 class="m-0 font-weight-bold text-primary text-center">Angka Pada
-                            Marker
-                            Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
-                        </div>
+                        {{-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
+
+                        </div> --}}
+                        <h6 class="m-0 font-weight-bold text-primary text-center">Angka Pada
+                                Marker
+                                Merupakan Urutan Prioritas Pengangkutan Sampah</h6>
                         {{-- <h6 class="m-0 font-weight-bold primary-text center-text">Angka Pada
                             Marker
                             Merupakan Urutan Prioritas Pengangkutan Sampah</h6> --}}
@@ -294,16 +295,6 @@
                                 popupAnchor: [-3, -76]
                             });
 
-                            var customIconUrl = iconUrl = '{{ asset('assets/img/tps.png') }}';
-
-                            // Buat objek ikon dengan gambar kustom
-                            var customIcon = L.icon({
-                                iconUrl: customIconUrl,
-                                iconSize: [20, 30], // Sesuaikan ukuran ikon sesuai kebutuhan
-                                iconAnchor: [25, 50], // Posisi pusat bawah ikon, sesuaikan sesuai kebutuhan
-                                popupAnchor: [0, -50] // Posisi popup di atas ikon, sesuaikan sesuai kebutuhan
-                            });
-
                             var mainMarker = L.marker([untan[0].lat, untan[0].lng], {
                                 icon: warnaIcon1
                             }).addTo(map);
@@ -333,35 +324,71 @@
 
                                 // Add additional markers to the layer group
                                 additionalMarkerPositions.forEach(function(position) {
+                                    // Determine the icon URL based on the marker name
+                                    var iconUrl = getIconUrl(position.name);
+
+                                    // Create a custom icon for the additional marker
+                                    var customIcon = L.icon({
+                                        iconUrl: iconUrl,
+                                        iconSize: [20, 30],
+                                        iconAnchor: [25, 50],
+                                        popupAnchor: [0, -50]
+                                    });
+
                                     var newMarker = L.marker([position.lat, position.lng], {
                                         icon: customIcon
                                     });
-                                    newMarker.bindPopup(`<b>${position.name}</b><br>${popupUntan}`);
 
-                                    additionalMarkersGroup.addLayer(newMarker);
-
+                                    // Open the popup when the marker is clicked
                                     // newMarker.on('click', function() {
                                     //     newMarker.openPopup();
                                     // });
+
+                                    newMarker.bindPopup(`<b>${position.name}</b><br>${popupUntan}`);
+
+                                    // Add the new marker to the layer group
+                                    additionalMarkersGroup.addLayer(newMarker);
                                 });
 
                                 // Add the layer group to the map
                                 map.addLayer(additionalMarkersGroup);
+
+                                // Open the popupUntan for the main marker
+                                // mainMarker.bindPopup(popupUntan).openPopup();
                             });
                             additionalMarkersGroup.on('click', function(event) {
                                 event.layer.openPopup();
                             });
-
                             // Close the additional markers when clicking elsewhere on the map
                             map.on('click', function(e) {
                                 // Remove the layer group from the map
                                 map.removeLayer(additionalMarkersGroup);
+
+                                // Close the popupUntan for the main marker
+                                // mainMarker.closePopup();
                             });
 
                             // Close the additional markers when closing the main marker popup
                             mainMarker.bindPopup(popupUntan).on('popupclose', function() {
                                 map.removeLayer(additionalMarkersGroup);
                             });
+
+                            function getIconUrl(markerName) {
+                                // Determine the icon URL based on the marker name
+                                // You can customize this logic based on your requirements
+                                if (markerName === 'tps 1') {
+                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                } else if (markerName === 'tps 2') {
+                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                } else if (markerName === 'tps 3') {
+                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                } else {
+                                    // Default icon if the name doesn't match any condition
+                                    return '{{ asset('assets/img/tps.png') }}';
+                                }
+                            }
+
+
 
 
                             var polnep = [{
@@ -459,16 +486,6 @@
                                 popupAnchor: [-3, -76]
                             });
 
-                            var customIconUrl2 = iconUrl = '{{ asset('assets/img/tps.png') }}';
-
-                            // Buat objek ikon dengan gambar kustom
-                            var customIcon = L.icon({
-                                iconUrl: customIconUrl2,
-                                iconSize: [20, 30], // Sesuaikan ukuran ikon sesuai kebutuhan
-                                iconAnchor: [25, 50], // Posisi pusat bawah ikon, sesuaikan sesuai kebutuhan
-                                popupAnchor: [0, -50] // Posisi popup di atas ikon, sesuaikan sesuai kebutuhan
-                            });
-
                             var mainmarker2 = L.marker([polnep[0].lat, polnep[0].lng], {
                                 icon: warnaIcon2
                             }).addTo(map);
@@ -498,6 +515,16 @@
 
                                 // Add additional markers to the layer group
                                 additionalMarkerPositions.forEach(function(position) {
+                                    // Determine the icon URL based on the marker name
+                                    var iconUrl = getIconUrl2(position.name);
+
+                                    // Create a custom icon for the additional marker
+                                    var customIcon = L.icon({
+                                        iconUrl: iconUrl,
+                                        iconSize: [20, 30],
+                                        iconAnchor: [25, 50],
+                                        popupAnchor: [0, -50]
+                                    });
                                     var newmarker2 = L.marker([position.lat, position.lng], {
                                         icon: customIcon
                                     });
@@ -527,6 +554,21 @@
                             mainmarker2.bindPopup(popupPolnep).on('popupclose', function() {
                                 map.removeLayer(markergrup2);
                             });
+
+                            function getIconUrl2(markerName) {
+                                // Determine the icon URL based on the marker name
+                                // You can customize this logic based on your requirements
+                                if (markerName === 'tps 1') {
+                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                } else if (markerName === 'tps 2') {
+                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                } else if (markerName === 'tps 3') {
+                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                } else {
+                                    // Default icon if the name doesn't match any condition
+                                    return '{{ asset('assets/img/tps.png') }}';
+                                }
+                            }
 
 
                             var rusunawa = [{
@@ -624,16 +666,6 @@
                                 popupAnchor: [-3, -76]
                             });
 
-                            var customIconUrl3 = iconUrl = '{{ asset('assets/img/tps.png') }}';
-
-                            // Buat objek ikon dengan gambar kustom
-                            var customIcon = L.icon({
-                                iconUrl: customIconUrl3,
-                                iconSize: [20, 30], // Sesuaikan ukuran ikon sesuai kebutuhan
-                                iconAnchor: [25, 50], // Posisi pusat bawah ikon, sesuaikan sesuai kebutuhan
-                                popupAnchor: [0, -50] // Posisi popup di atas ikon, sesuaikan sesuai kebutuhan
-                            });
-
                             var mainmarker3 = L.marker([rusunawa[0].lat, rusunawa[0].lng], {
                                 icon: warnaIcon3
                             }).addTo(map);
@@ -663,6 +695,16 @@
 
                                 // Add additional markers to the layer group
                                 markerposition3.forEach(function(position) {
+                                    // Determine the icon URL based on the marker name
+                                    var iconUrl = getIconUrl3(position.name);
+
+                                    // Create a custom icon for the additional marker
+                                    var customIcon = L.icon({
+                                        iconUrl: iconUrl,
+                                        iconSize: [20, 30],
+                                        iconAnchor: [25, 50],
+                                        popupAnchor: [0, -50]
+                                    });
                                     var newmarker3 = L.marker([position.lat, position.lng], {
                                         icon: customIcon
                                     });
@@ -692,6 +734,22 @@
                             mainmarker3.bindPopup(popupRusunawa).on('popupclose', function() {
                                 map.removeLayer(markergrup3);
                             });
+
+                            function getIconUrl3(markerName) {
+                                // Determine the icon URL based on the marker name
+                                // You can customize this logic based on your requirements
+                                if (markerName === 'tps 1') {
+                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                } else if (markerName === 'tps 2') {
+                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                } else if (markerName === 'tps 3') {
+                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                } else {
+                                    // Default icon if the name doesn't match any condition
+                                    return '{{ asset('assets/img/tps.png') }}';
+                                }
+                            }
+
 
 
                             var siskom = [{
@@ -788,16 +846,6 @@
                                 popupAnchor: [-3, -76]
                             });
 
-                            var customIconUrl4 = iconUrl = '{{ asset('assets/img/tps.png') }}';
-
-                            // Buat objek ikon dengan gambar kustom
-                            var customIcon = L.icon({
-                                iconUrl: customIconUrl4,
-                                iconSize: [20, 30], // Sesuaikan ukuran ikon sesuai kebutuhan
-                                iconAnchor: [25, 50], // Posisi pusat bawah ikon, sesuaikan sesuai kebutuhan
-                                popupAnchor: [0, -50] // Posisi popup di atas ikon, sesuaikan sesuai kebutuhan
-                            });
-
                             var mainmarker4 = L.marker([siskom[0].lat, siskom[0].lng], {
                                 icon: warnaIcon4
                             }).addTo(map);
@@ -822,6 +870,16 @@
 
                                 // Add additional markers to the layer group
                                 additionalMarkerPositions.forEach(function(position) {
+                                    // Determine the icon URL based on the marker name
+                                    var iconUrl = getIconUrl4(position.name);
+
+                                    // Create a custom icon for the additional marker
+                                    var customIcon = L.icon({
+                                        iconUrl: iconUrl,
+                                        iconSize: [20, 30],
+                                        iconAnchor: [25, 50],
+                                        popupAnchor: [0, -50]
+                                    });
                                     var newmarker4 = L.marker([position.lat, position.lng], {
                                         icon: customIcon
                                     });
@@ -851,8 +909,35 @@
                             mainmarker4.bindPopup(popupSiskom).on('popupclose', function() {
                                 map.removeLayer(markergrup4);
                             });
-                            // .bindPopup(popupSiskom)
-                            // .openPopup();
+
+                            function getIconUrl4(markerName) {
+                                // Determine the icon URL based on the marker name
+                                // You can customize this logic based on your requirements
+                                if (markerName === 'tps 1') {
+                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                } else if (markerName === 'tps 2') {
+                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                } else if (markerName === 'tps 3') {
+                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                } else {
+                                    // Default icon if the name doesn't match any condition
+                                    return '{{ asset('assets/img/tps.png') }}';
+                                }
+                            }
+
+                            // Menambahkan marker pada koordinat yang berbeda dengan ikon kustom
+                            var customIconpetugas = L.icon({
+                                iconUrl: '{{ asset('assets/img/tpshijau1.png') }}',
+                                iconSize: [50, 90],
+                                shadowSize: [50, 64],
+                                iconAnchor: [22, 94],
+                                popupAnchor: [-3, -76]// Posisi popup di atas ikon, sesuaikan sesuai kebutuhan
+                            });
+
+                            var customMarker = L.marker([-0.062413997182524286, 109.35063601241691], {
+                                icon: customIconpetugas
+                            }).addTo(map);
+                            customMarker.bindPopup("<b>Petugas!</b>").openPopup();
                         </script>
 
 
