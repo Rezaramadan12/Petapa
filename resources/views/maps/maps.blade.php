@@ -330,7 +330,7 @@
                                     // Create a custom icon for the additional marker
                                     var customIcon = L.icon({
                                         iconUrl: iconUrl,
-                                        iconSize: [20, 30],
+                                        iconSize: [20, 40],
                                         iconAnchor: [25, 50],
                                         popupAnchor: [0, -50]
                                     });
@@ -377,11 +377,11 @@
                                 // Determine the icon URL based on the marker name
                                 // You can customize this logic based on your requirements
                                 if (markerName === 'tps 1') {
-                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                    return '{{ asset('assets/img/tps1.png') }}';
                                 } else if (markerName === 'tps 2') {
-                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                    return '{{ asset('assets/img/tps2.png') }}';
                                 } else if (markerName === 'tps 3') {
-                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                    return '{{ asset('assets/img/tps3.png') }}';
                                 } else {
                                     // Default icon if the name doesn't match any condition
                                     return '{{ asset('assets/img/tps.png') }}';
@@ -521,7 +521,7 @@
                                     // Create a custom icon for the additional marker
                                     var customIcon = L.icon({
                                         iconUrl: iconUrl,
-                                        iconSize: [20, 30],
+                                        iconSize: [20, 40],
                                         iconAnchor: [25, 50],
                                         popupAnchor: [0, -50]
                                     });
@@ -559,11 +559,11 @@
                                 // Determine the icon URL based on the marker name
                                 // You can customize this logic based on your requirements
                                 if (markerName === 'tps 1') {
-                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                    return '{{ asset('assets/img/tps1.png') }}';
                                 } else if (markerName === 'tps 2') {
-                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                    return '{{ asset('assets/img/tps2.png') }}';
                                 } else if (markerName === 'tps 3') {
-                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                    return '{{ asset('assets/img/tps3.png') }}';
                                 } else {
                                     // Default icon if the name doesn't match any condition
                                     return '{{ asset('assets/img/tps.png') }}';
@@ -701,7 +701,7 @@
                                     // Create a custom icon for the additional marker
                                     var customIcon = L.icon({
                                         iconUrl: iconUrl,
-                                        iconSize: [20, 30],
+                                        iconSize: [20, 40],
                                         iconAnchor: [25, 50],
                                         popupAnchor: [0, -50]
                                     });
@@ -739,11 +739,11 @@
                                 // Determine the icon URL based on the marker name
                                 // You can customize this logic based on your requirements
                                 if (markerName === 'tps 1') {
-                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                    return '{{ asset('assets/img/tps1.png') }}';
                                 } else if (markerName === 'tps 2') {
-                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                    return '{{ asset('assets/img/tps2.png') }}';
                                 } else if (markerName === 'tps 3') {
-                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                    return '{{ asset('assets/img/tps3.png') }}';
                                 } else {
                                     // Default icon if the name doesn't match any condition
                                     return '{{ asset('assets/img/tps.png') }}';
@@ -876,7 +876,7 @@
                                     // Create a custom icon for the additional marker
                                     var customIcon = L.icon({
                                         iconUrl: iconUrl,
-                                        iconSize: [20, 30],
+                                        iconSize: [20, 40],
                                         iconAnchor: [25, 50],
                                         popupAnchor: [0, -50]
                                     });
@@ -914,11 +914,11 @@
                                 // Determine the icon URL based on the marker name
                                 // You can customize this logic based on your requirements
                                 if (markerName === 'tps 1') {
-                                    return '{{ asset('assets/img/tpshijau1.png') }}';
+                                    return '{{ asset('assets/img/tps1.png') }}';
                                 } else if (markerName === 'tps 2') {
-                                    return '{{ asset('assets/img/tpshijau2.png') }}';
+                                    return '{{ asset('assets/img/tps2.png') }}';
                                 } else if (markerName === 'tps 3') {
-                                    return '{{ asset('assets/img/tpshijau3.png') }}';
+                                    return '{{ asset('assets/img/tps3.png') }}';
                                 } else {
                                     // Default icon if the name doesn't match any condition
                                     return '{{ asset('assets/img/tps.png') }}';
@@ -927,7 +927,7 @@
 
                             // Menambahkan marker pada koordinat yang berbeda dengan ikon kustom
                             var customIconpetugas = L.icon({
-                                iconUrl: '{{ asset('assets/img/tpshijau1.png') }}',
+                                iconUrl: '{{ asset('assets/img/marker_petugas.png') }}',
                                 iconSize: [50, 90],
                                 shadowSize: [50, 64],
                                 iconAnchor: [22, 94],
