@@ -31,28 +31,28 @@
         <a class="nav-link" href="/untan" onmouseover="this.style.backgroundColor='#ffd700'"
             onmouseout="this.style.backgroundColor='transparent'">
             <i class="fas fa-fw fa-chart-line"></i>
-            <span>Untan</span>
+            <span>Data Untan</span>
         </a>
     </li>
     <li class="nav-item" style="transition: background-color 0.3s;">
         <a class="nav-link" href="/polnep" onmouseover="this.style.backgroundColor='#ffd700'"
             onmouseout="this.style.backgroundColor='transparent'">
             <i class="fas fa-fw fa-chart-line"></i>
-            <span>Polnep</span>
+            <span>Data Polnep</span>
         </a>
     </li>
     <li class="nav-item" style="transition: background-color 0.3s;">
         <a class="nav-link" href="/rusunawa" onmouseover="this.style.backgroundColor='#ffd700'"
             onmouseout="this.style.backgroundColor='transparent'">
             <i class="fas fa-fw fa-chart-line"></i>
-            <span>Rusunawa</span>
+            <span>Data Rusunawa</span>
         </a>
     </li>
     <li class="nav-item" style="transition: background-color 0.3s;">
         <a class="nav-link" href="/siskom" onmouseover="this.style.backgroundColor='#ffd700'"
             onmouseout="this.style.backgroundColor='transparent'">
             <i class="fas fa-fw fa-chart-line"></i>
-            <span>Siskom</span>
+            <span>Data Siskom</span>
         </a>
     </li>
     <li class="nav-item" style="transition: background-color 0.3s;">
