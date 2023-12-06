@@ -64,19 +64,19 @@
                                     </a>
                                     <a class="dropdown-item" href="/untan">
                                         <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
-                                        Data Untan
+                                        Untan
                                     </a>
                                     <a class="dropdown-item" href="/polnep">
                                         <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
-                                        Data Polnep
+                                        Polnep
                                     </a>
                                     <a class="dropdown-item" href="/rusunawa">
                                         <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
-                                        Data Rusunawa
+                                        Rusunawa
                                     </a>
                                     <a class="dropdown-item" href="/siskom">
                                         <i class="fas fa-fw fa-chart-line mr-2 text-gray-400"></i>
-                                        Data Siskom
+                                        Siskom
                                     </a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#" data-toggle="modal"
@@ -203,8 +203,8 @@
                             }).addTo(map);
 
                             var untan = [{
-                                "lat": -0.060109,
-                                "lng": 109.345409,
+                                "lat": -0.06003923078743205,
+                                "lng": 109.34541463266854,
                                 "name": 'Untan',
                                 "volumeorganik": {{ $untan->volumeorganik }},
                                 "volumenonorganik": {{ $untan->volumenonorganik }},
@@ -305,18 +305,18 @@
                                 var clickedLatLng = e.latlng;
 
                                 var additionalMarkerPositions = [{
-                                        lat: -0.060760349412644674,
-                                        lng: 109.34469725322089,
+                                        lat: -0.06025183615529076,
+                                        lng: 109.34523781712993,
                                         name: 'tps 1'
                                     },
                                     {
-                                        lat: -0.06005868516545469,
-                                        lng: 109.34494513417717,
+                                        lat: -0.0600092781549708,
+                                        lng: 109.34526524930074,
                                         name: 'tps 2'
                                     },
                                     {
-                                        lat: -0.06053398771264797,
-                                        lng: 109.34543046871809,
+                                        lat: -0.0602019971769077,
+                                        lng: 109.34542803437336,
                                         name: 'tps 3'
                                     }
                                     // Add more positions as needed
@@ -392,8 +392,8 @@
 
 
                             var polnep = [{
-                                "lat": -0.053803,
-                                "lng": 109.347326,
+                                "lat": -0.05395548111298981,
+                                "lng": 109.34704905347925,
                                 "name": 'Polnep',
                                 "volumeorganik": {{ $polnep->volumeorganik }},
                                 "volumenonorganik": {{ $polnep->volumenonorganik }},
@@ -496,18 +496,18 @@
                                 var clickedLatLng = e.latlng;
 
                                 var additionalMarkerPositions = [{
-                                        lat: -0.05334282591816302,
-                                        lng: 109.34689872576202,
+                                        lat: -0.05395133072045861,
+                                        lng: 109.34724695347302,
                                         name: 'tps 1'
                                     },
                                     {
-                                        lat: -0.05450616537995313,
-                                        lng: 109.34674200372588,
+                                        lat: -0.05408147841338792,
+                                        lng: 109.34708615887618,
                                         name: 'tps 2'
                                     },
                                     {
-                                        lat: -0.054439145744775604,
-                                        lng: 109.34579458932136,
+                                        lat: -0.05397171295080825,
+                                        lng: 109.34697937333367,
                                         name: 'tps 3'
                                     }
                                     // Add more positions as needed
@@ -572,8 +572,8 @@
 
 
                             var rusunawa = [{
-                                "lat": -0.062003,
-                                "lng": 109.348687,
+                                "lat": -0.062049106215126444,
+                                "lng": 109.34861849048488,
                                 "name": 'Rusunawa',
                                 "volumeorganik": {{ $rusunawa->volumeorganik }},
                                 "volumenonorganik": {{ $rusunawa->volumenonorganik }},
@@ -676,18 +676,18 @@
                                 var clickedLatLng = e.latlng;
 
                                 var markerposition3 = [{
-                                        lat: -0.06187354957575086,
-                                        lng: 109.34841356117614,
+                                        lat: -0.06200690081364493,
+                                        lng: 109.34855070962226,
                                         name: 'tps 1'
                                     },
                                     {
-                                        lat: -0.06224444483223947,
-                                        lng: 109.34864635056505,
+                                        lat: -0.062167937858927075,
+                                        lng: 109.34873627527242,
                                         name: 'tps 2'
                                     },
                                     {
-                                        lat: -0.06225439873922257,
-                                        lng: 109.34814091302509,
+                                        lat: -0.06215824413818658,
+                                        lng: 109.34850778025569,
                                         name: 'tps 3'
                                     }
                                     // Add more positions as needed
@@ -753,8 +753,8 @@
 
 
                             var siskom = [{
-                                "lat": -0.0571164,
-                                "lng": 109.3452931,
+                                "lat": -0.057136052864503024,
+                                "lng": 109.34518116062256,
                                 "name": 'Siskom',
                                 "volumeorganik": {{ $siskom_tps1->kapasitas }},
                                 "volumenonorganik": {{ $siskom_tps2->kapasitas }},
@@ -856,13 +856,13 @@
                                 var clickedLatLng = e.latlng;
 
                                 var additionalMarkerPositions = [{
-                                        lat: -0.056945,
-                                        lng: 109.344877,
+                                        lat: -0.05707100932922065,
+                                        lng: 109.34510136490367,
                                         name: 'tps 1'
                                     },
                                     {
-                                        lat: -0.05727264036144048,
-                                        lng: 109.3452504530016,
+                                        lat: -0.057235173415397564,
+                                        lng: 109.34529105200123,
                                         name: 'tps 2'
                                     }
                                     // Add more positions as needed
