@@ -15,7 +15,7 @@
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
-                            <tr>
+                            <tr class="text-center">
                                 <th>No</th>
                                 <th>Tempat Sampah 1</th>
                                 <th>Tempat Sampah 2</th>
@@ -34,7 +34,7 @@
                                     <td>{{ $data->volumeB3 }} %</td>
                                     <td>{{ $data->volumetotaledge }} %</td>
                                     <td>
-                                        <div class="d-flex justify-content-end flex-shrink-0">
+                                        <div>
                                             @if ($data->volumetotaledge <= 33)
                                                 <span
                                                     class="badge badge-pill badge-success fw-bolder px-4 py-2">Sedikit</span>
