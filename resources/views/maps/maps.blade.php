@@ -150,7 +150,7 @@
                         <title>PETAPA (Pemantauan Tempat Sampah)</title>
                         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
                         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-                        {{-- <script>
+                        <script>
                             // Fungsi untuk melakukan refresh halaman setiap 5 menit (300,000 milidetik)
                             function autoRefresh() {
                                 location.reload();
@@ -158,7 +158,7 @@
 
                             // Atur interval refresh
                             setTimeout(autoRefresh, 10000); // 300,000 ms = 5 menit
-                        </script> --}}
+                        </script>
                         <script>
                             document.getElementById('login').addEventListener('click', function() {
                                 // Ganti URL login sesuai dengan rute login Anda

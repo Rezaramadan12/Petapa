@@ -47,22 +47,22 @@ class MapsController extends Controller
             'polnep' => [
                 'model' => 'polnep',
                 'volume' => $data['polnep']->volumetotaledge,
-                'jarak' => 4,
+                'jarak' => 400,
             ],
             'untan' => [
                 'model' => 'untan',
                 'volume' => $data['untan']->volumetotaledge,
-                'jarak' => 2,
+                'jarak' => 200,
             ],
             'siskom' => [
                 'model' => 'siskom',
                 'volume' => $data['total_siskom'],
-                'jarak' => 3,
+                'jarak' => 300,
             ],
             'rusunawa' => [
                 'model' => 'rusunawa',
                 'volume' => $data['rusunawa']->volumetotaledge,
-                'jarak' => 1,
+                'jarak' => 100,
             ],
         ];
 
@@ -72,10 +72,10 @@ class MapsController extends Controller
                 // Kedua nilai volume di atas 66, urutkan berdasarkan jarak terdekat
                 return $a['jarak'] - $b['jarak'];
             } elseif (
-                $a['volume'] >= 34 &&
-                $a['volume'] <= 65 &&
-                $b['volume'] >= 34 &&
-                $b['volume'] <= 65
+                $a['volume'] >= 33 &&
+                $a['volume'] <= 66 &&
+                $b['volume'] >= 33 &&
+                $b['volume'] <= 66
             ) {
                 // Kedua nilai volume antara 34 dan 65, urutkan berdasarkan jarak terdekat
                 return $a['jarak'] - $b['jarak'];
