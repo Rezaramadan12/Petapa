@@ -229,6 +229,12 @@
                                         </div>
                                     </div>
                                     <div class="progress-container">
+                                        <div class="volume-label">Tempat Sampah 3: ${untan[0].volumeB3}%</div>
+                                        <div class="progress">
+                                            <div class="progress-bar ${getColorCategory(untan[0].volumeB3)}" style="width: ${untan[0].volumeB3}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-container">
                                         <div class="volume-label">Volume Rata - Rata: ${untan[0].volumetotaledge}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(untan[0].volumetotaledge)}" style="width: ${untan[0].volumetotaledge}%;"></div>
@@ -420,6 +426,12 @@
                                         </div>
                                     </div>
                                     <div class="progress-container">
+                                        <div class="volume-label">Tempat Sampah 3: ${polnep[0].volumeB3}%</div>
+                                        <div class="progress">
+                                            <div class="progress-bar ${getColorCategory(polnep[0].volumeB3)}" style="width: ${polnep[0].volumeB3}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-container">
                                         <div class="volume-label">Volume Rata - Rata: ${polnep[0].volumetotaledge}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(polnep[0].volumetotaledge)}" style="width: ${polnep[0].volumetotaledge}%;"></div>
@@ -597,6 +609,12 @@
                                         <div class="volume-label">Tempat Sampah 2: ${rusunawa[0].volumenonorganik}%</div>
                                         <div class="progress">
                                             <div class="progress-bar ${getColorCategory(rusunawa[0].volumenonorganik)}" style="width: ${rusunawa[0].volumenonorganik}%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-container">
+                                        <div class="volume-label">Tempat Sampah 3: ${rusunawa[0].volumeB3}%</div>
+                                        <div class="progress">
+                                            <div class="progress-bar ${getColorCategory(rusunawa[0].volumeB3)}" style="width: ${rusunawa[0].volumeB3}%;"></div>
                                         </div>
                                     </div>
                                     <div class="progress-container">
